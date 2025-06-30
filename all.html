@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Confessions - Andar Ki Baat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(to bottom, #fff1f9, #ffd6e8);
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .custom-navbar {
+      background: linear-gradient(to right, #ff4f8b, #f2b5c4, #ff4f8b);
+      box-shadow: 0 4px 12px rgba(255, 0, 150, 0.4);
+    }
+
+    .navbar-logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 12px;
+    }
+
+    .brand-name {
+      font-family: "Lobster", cursive;
+      font-size: 1.6rem;
+      color: #000;
+    }
+
+    .navbar-nav .nav-link {
+      color: #000 !important;
+      margin-left: 15px;
+      font-weight: 500;
+      position: relative;
+      transition: 0.3s;
+    }
+
+    .navbar-nav .nav-link::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 10%;
+      width: 80%;
+      height: 2px;
+      background: linear-gradient(90deg, #ff4f8b, #ff00aa, #c63dff);
+      border-radius: 10px;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar-nav .nav-link:hover::after,
+    .navbar-nav .nav-link.active::after {
+      transform: scaleX(1);
+    }
+
+    .navbar-nav .nav-link:hover {
+      text-shadow: 0 0 6px #ff80cc;
+    }
+
+    .confessions-container {
+      max-width: 1000px;
+      margin: 100px auto;
+    }
+
+    .confession-card {
+      background: #fff;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(255, 0, 150, 0.2);
+      margin-bottom: 20px;
+      padding: 20px;
+    }
+
+    .confession-card .category {
+      font-weight: bold;
+      color: #ff4f8b;
+    }
+
+    .confession-card .timestamp {
+      font-size: 0.85rem;
+      color: #777;
+    }
+
+    .heading {
+      text-align: center;
+      margin-bottom: 30px;
+      font-family: 'Lobster', cursive;
+      font-size: 2rem;
+      color: #8c112e;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-navbar px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="./logo_with_transparency.png" alt="Logo" class="navbar-logo me-2" />
+      <span class="brand-name">Andar Ki Baat</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Trending</a></li>
+        <li class="nav-item"><a class="nav-link" href="submit.html">Submit</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="confessions-container" data-aos="fade-up">
+    <h2 class="heading">📜 All Confessions</h2>
+
+    <div class="confession-card">
+      <div class="category">#Love</div>
+      <p>I told my crush I liked them... on their birthday post 🎂</p>
+      <div class="timestamp">2 days ago</div>
+    </div>
+
+    <div class="confession-card">
+      <div class="category">#College Life</div>
+      <p>I quit my job just to avoid a Monday meeting 😅</p>
+      <div class="timestamp">4 days ago</div>
+    </div>
+
+    <div class="confession-card">
+      <div class="category">#Friendship</div>
+      <p>My roommate still doesn’t know I ate his pizza. Twice. 🍕</p>
+      <div class="timestamp">6 days ago</div>
+    </div>
+
+    <!-- More cards can be added dynamically later -->
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
+</body>
+</html>

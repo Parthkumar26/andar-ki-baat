@@ -12,6 +12,10 @@ body {
     color: #fff;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Navbar */
 .custom-navbar {
     background: linear-gradient(to right, #ff4f8b, #f2b5c4, #ff4f8b);
@@ -65,18 +69,7 @@ body {
     text-shadow: 0 0 6px #ff80cc;
 }
 
-/* Hero */
-/* .hero {
-    background: linear-gradient(rgba(26, 0, 31, 0.2), rgba(26, 0, 31, 0.2)),
-        url("H3s.png") center/cover no-repeat;
-    background-blend-mode: overlay;
-    filter: brightness(1.2) contrast(1.2);
-    min-height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 20px;
-} */
+
 .hero {
     background: url("H3s.png") center/cover no-repeat;
     min-height: 90vh;
@@ -91,10 +84,7 @@ body {
 .hero-box {
     background: rgba(248, 129, 167, 0.00009);
     padding: 10px;
-    /* border-radius: 20px; */
     text-align: center;
-    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.85); */
-    /* backdrop-filter: blur(12px); */
 }
 
 .hero-logo {
@@ -163,6 +153,7 @@ body {
     right: 0.3em;
     transition: all 0.3s;
 }
+
 
 .cssbuttons-io-button:hover .icon {
     width: calc(100% - 0.6em);
